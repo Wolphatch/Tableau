@@ -1,0 +1,35 @@
+基于tableau 官方教程：https://www.tableau.com/learn/tutorials/on-demand/getting-started?playlist=230850
+
+
+1. Tableau 不同表之间可以通过一个相同的key相互连接，这里和关系型数据库很像。 需要注意的是cardinality和reference integraty。
+    
+    对于cardinality，例如一个表有用户id，另一个表有产品id。 一个用户可以买很多东西，一个东西可以被很多用户购买。 所以这两个field之间的关系是多对多。
+    
+    对于reference integraty， 现在有两个表，父表的某一个非primary key的field引用了另一个表（子表）的primary key或者surrogate key当中的一个。 一旦子表删除了primary key当中的某一个记     录，父表当中引用子表的这一个field（foreign key）拥有三种做法，set null， cascade， restrict。 这些保证了表之间的一致性
+    
+2. 新版2020.3中， 如果要连接两个表，需要右击第一个表open，然后编辑两个表之间的关系
+
+3. 在预览中，如果需要split一个key，只需要右击那个field选择custom split
+
+4. dimensions为定性变量（如名字或者日期），可以用来分类，分段，多层坐标轴
+
+5. measures的为数值型或者定量变量，可以用来aggregate
+
+6. discrete为蓝色，绿色为连续型。如绿色的measure为连续性的，蓝色的dimension为离散型
+
+7. Cross Table 很有用。一个注意点是，measure name可以放在row或者column，measure value放在mark中，这样就会跳出一个measure value的拖选框。
+
+    7.1 这个多选框允许你在一个cell中放入多个数据或者calculation
+    
+    7.2 cell之间可以做calculation （比如增长率），这就需要使用measure value 拖选框中的table calculation功能
+    
+        7.2.1 calculation type 有很多，比如说每年的差值，每年的增长率
+        
+        7.2.2 Compute using 指的是计算涉及的区域和方向，如cross指的是从左到右，down指的是从上到下，corss then down指的是先从左到右再从上往下。
+                同时，计算区域分为table（整个表）和pane（最外层横纵坐标所对应的区域）和cell 单元素。
+    7.3 Marks的作用区域是每个cell
+    
+    7.4 行或者列的每一个层级都可以开启highlighter
+    
+8. 将一个变量拖拽到另一个变量上，就可以得到一个包含这两项的子菜单。这个子菜单中，变量的顺序是有讲究的，要从大到小。
+
