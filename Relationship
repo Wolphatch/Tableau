@@ -1,0 +1,23 @@
+基于 https://www.tableau.com/learn/tutorials/on-demand/relationships?playlist=230852
+
+1. 表之间的relationship在sql中已经系统学习过
+
+2. 横坐标和纵坐标可以右击选择new calculation，在这里可以做自定义的计算，如：avg([Unit Price]-[Unit Cost])
+  此功能也可以通过建立创建 create calculated field创建
+
+3. 菜单analyze列有添加subtotal的功能，能根据行列添加subtotal。对于多层的表来说可以加总下层表的数据来展示上层的数据。 
+  3.1 show column/row grand totoal时会将所有行/列的数据加总（忽略层级）
+  3.2 column totals to top/ row totals to left 决定total出现的位置是在数据之前还是数据之后
+  
+4. cardinality的设置：
+  参照关系模型的erd，一个product属于一个category，一个category有很多product。 在设置的时候，在product一方设置为many，在category放设置为one
+  
+5. 设置reference integrety的时候。
+  
+  一个category可能有产品，一些可能没有，所以使用some records match
+  一个product必有一个category，所以all records match
+  
+  一个用户至少有一个transaction，所以使用all
+  一个transaction可能没有用户，所以使用some
+  
+6. 
