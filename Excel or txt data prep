@@ -1,0 +1,13 @@
+https://www.tableau.com/learn/tutorials/on-demand/data-prep-text-and-excel-files?playlist=230852&ssologin=true
+
+
+1. 使用data interpreter可以自动识别从excel导入的数据的colname
+
+2. 现在有一个表，其colname为一系列的日期，rowname为员工号，value为某个员工在某一天的航班数量（航空公司）
+    现在的目标是将表的结构变为一个pivot table，其只有colname，没有rowname。
+    2.1 做法是：选择除了员工号（row）之外的所有列，右击选择pivot
+    
+3. 对于员工号（其违反了不可再分的原则，可以分成部门和号），列名Employee右键选择split，将其分为两列
+
+4. 也可以custcom split，第一个输入分割的符号，第二个输入要分割多少
+
