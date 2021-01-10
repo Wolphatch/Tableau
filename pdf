@@ -1,0 +1,4 @@
+https://www.tableau.com/learn/tutorials/on-demand/connecting-pdfs?playlist=230852
+
+1. 如果有一行的数据在读取时被当作了列，那选中行名列和这一列，右击选择merge mismateced fields。
+    注意还有一个pivot 选项的作用
