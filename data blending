@@ -9,6 +9,12 @@ https://www.tableau.com/learn/tutorials/on-demand/data-blending?playlist=230852
 5. 这里有个概念叫primary datasource，在左上角data区域的data会有个蓝色的钩，另一个数据源叫second。
 6. 编辑时先从primary开始，然后secondary与primary连接的field会有一个锁状图标。红色锁表示这个link正在使用，灰色代表并未使用
 7. 这种连接以sheet为基础，如果创建新的sheet，这种连接在新的sheet就不在了。
-8. 这种连接不同于join（但是展现的时候会是inner join），更像是一种基于common field。 两个数据源可以在一个页面上同时展现两个图片（拥有common field做为纵坐标，各自的某个数据作为其自己图标的横坐标）
+8. 这种连接不同于join，更像是一种基于common field。 两个数据源可以在一个页面上同时展现两个图片（拥有common field做为纵坐标，各自的某个数据作为其自己图标的横坐标）
 9. 两张图可以同时使用measure values和measure names
-  但是创建measure values所使用的calculation 要注意格式[source名].[变量名]。 如：[Sheet1 (Coffee Chain)].[Sales]-[Sheet1 (Coffee Chain)].[Sales]
+  9.1 但是创建measure values所使用的calculation 要注意格式[source名].[变量名]。 如：[Sheet1 (Coffee Chain)].[Sales]-[Sheet1 (Coffee Chain)].[Sales]
+  9.2 在calculation中，数字+null=null，zn函数可以将null转化为0.
+  
+10. 两个数据源由state相连，使用primary数据源的state和secondary的area code作为横坐标的时候，会因为一个state对应多个area code而导致asterisks（星号问题）。
+    解决方案：选用second的state和area code。但同时带来的问题是，因为primary的变量中没有area code，parimary的sum（sales）在一个state下的每一个area都会显示为一个state的总和。
+    所以这时候就要使用cross database join
+ 
