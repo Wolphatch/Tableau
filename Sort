@@ -1,0 +1,9 @@
+https://www.tableau.com/learn/tutorials/on-demand/sorting?playlist=230853
+
+
+1. 在sort的时候，可以拖拽field到指定位置实现手动排序
+2. 但是最好的方式其实是右击想sort的field，选择sort。这时候会出来一个sort的设置。在这里可以选择按照什么指标来sort。
+  比如我现在需要sort sub-category，我就可以右击sub-category的sort。然后我可以按照这个category卖掉的商品的数量来排序（field name选quantity，aggregation选sum）。
+  
+3. 另外一个注意点：如果选择plot中order priority的菜单下的sort（sort by sum(shipping cost)），那sort会按照data pane的第一个sort (first class)，也叫field sort
+    还有一个叫做nest sort，每个data pane（order priority）会按照各自的sum(shipping cost)排序，而不是统一按照第一个
