@@ -1,0 +1,9 @@
+https://www.tableau.com/learn/tutorials/on-demand/grouping?playlist=230853
+
+
+
+1. 现在有一个柱状图，纵坐标是所有小于400k的产品种类，横坐标是他们的sales。但是现在我不需要知道的这么详细，我需要把一些不重要的种类归成一个group，然后看他们的总sales。
+  可以在左边field选中sub-categoary，然后选择create-group。 将需要归为一类的品类放在一起。这是会产生一个新的field，叫做sub-category（group）。可以拿它来替代product这个hierarchy中的sub-category
+  
+  
+2. 工具栏里📎  可以吧数据点按照某个维度分成一组，这个维度中其他的数据会被标记为other
