@@ -1,0 +1,11 @@
+https://www.tableau.com/learn/tutorials/on-demand/getting-started-visual-analytics?playlist=230853
+
+1. 怎么画一个treemaps
+
+  1.1 基底需要一个方块（放在mark pane），这个方块是sum(shipping cost)（mark的下拉菜单选squares），我们需要以这个为基础将这个方块细化。
+  1.2 首先将这个方块按照priority分成四个部分，这四个部分是不同的priority。因为四个部分颜色要不一样，所以priority的mark选color。
+  1.3 其次要细化的是每一个priority下的market，所以将market拖入mark pane，并选择 detail。
+  1.4 最后细化的事category，即每个market下的货品种类
+  1.5 最后，每一个方块的含义是：在某个优先级别下，某个市场某类商品的shipping cost的总和。
+  
+ 
