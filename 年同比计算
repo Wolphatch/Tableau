@@ -1,0 +1,8 @@
+(ZN(SUM([Sales])) - LOOKUP(ZN(SUM([Sales])), -1)) / ABS(LOOKUP(ZN(SUM([Sales])), -1))
+
+
+1. table calculation functin
+
+  1.1 first() 返回此calculate using情况下的第一个，第二个是-1，第三个是-2.。。。。
+  1.2 last() 从最后一行到第二行分别为0，1，2，3，4，5，6.。。
+  1.3 lookup(sum[sales],2) 当前行+两行的位置
