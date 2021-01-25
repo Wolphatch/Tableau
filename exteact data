@@ -1,0 +1,10 @@
+https://elearning.tableau.com/desktop-iitableau/279980/scorm/2sv6wqv8zm0oo#
+
+
+
+https://help.tableau.com/current/pro/desktop/en-us/extracting_data.htm#:~:text=Select%20Aggregate%20data%20for%20visible,extract%20file%2C%20and%20increase%20performance.
+
+
+1. 可以使用extract data将 live data抽取出来
+2. 有很多选项可以使得抽取的数据更加的小（高效），比如fliter和预先计算aggregate
+
