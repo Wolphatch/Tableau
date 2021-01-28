@@ -1,0 +1,4 @@
+https://elearning.tableau.com/desktop-iitableau/279988/scorm/27fgc1ro2p2il
+
+在join的时候，我们可以通过join calculation对filed进行编辑，比如一个人名由fname和lname构成的表要和另外一个full name的表join的时候，可以吧join条件写为[fname]+' '+[lname]
+
