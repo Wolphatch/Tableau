@@ -1,0 +1,17 @@
+https://elearning.tableau.com/desktop-iitableau/280014/scorm/35yjqg1hopp3w
+
+
+
+我们现在拥有region， product name， sum(sales）
+
+我们现在想知道每个区域前10名sales的产品名是什么，使用一筛选器筛选region。每选取一个区域，就显示那个区域的前10
+
+这是，行里面region和product name，列是sum（sales）
+
+
+要取到每个区域的前10，不能使用filter的top10。 因为filter——top 10（region）对应的是全局的top 10 的product name。
+如果使用region和product name一起作为筛选器的话，逻辑是与。全局top10的产品名和当前区域拥有的产品的交集。这样无法显示这个区域的前10，如果这个区域的前10的某个产品不在全局top10
+
+
+所以使用上下文筛选器。在filter中选择region并选择变为context。这样的话，top10就变成了在选中region下的前10
+
