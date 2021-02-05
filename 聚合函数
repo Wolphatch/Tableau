@@ -1,0 +1,23 @@
+https://elearning.tableau.com/desktop-iitableau/280024/scorm/3pa0bk5i2gjv7#
+
+
+如列中是
+        category，
+        
+        IF sum([Profit])>0 then "Profitable "+min([Category])
+        else "Unprofitable "+min([Category])
+        end，
+        
+        subcategory，
+        
+  行是sum（profit）
+tableau看起来再使用聚合函数的时候，tableau会先计算group by（用sql的话说）category，subcategory。 得到每个sub下的利润总和再去计算列中第二项公式的结果。最后的结构会是
+
+        category
+        
+        profitable category/ unprofitable category
+        
+        subcategory
+        
+        
+      
