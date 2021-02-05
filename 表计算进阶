@@ -1,0 +1,21 @@
+https://elearning.tableau.com/desktop-iitableau/280029/scorm/9l3m6pyux2ri#
+
+
+
+if [Profit]>0 then "Profitable"
+else "Unprofitable"
+END
+
+
+这个将每一行增加一了个是否盈利的选项
+把它放在mark里面用颜色标记区分是否盈利
+还有个很重要的点在于，在个颜色使得一个ceil产生了两个部分
+在这个时候使用下面这个公式：
+
+COUNT([Order ID]) / TOTAL(COUNT([Order ID]))
+这个公式产生了一个measure供柱状图使用，total这个函数计算了这个ceil里面两个部分（盈利和不盈利的COUNT([Order ID])）之和
+这个函数起作用是基于第一个计算，将每个ceil分成两个部分的情况下，否则的话就是100%
+然后这个函数会分别输出每个部分的比例。
+结果就和图示一样
+
+
