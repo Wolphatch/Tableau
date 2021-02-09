@@ -1,0 +1,34 @@
+https://elearning.tableau.com/desktop-iitableau/280047/scorm/3it9zykzj2uhj
+
+
+
+使用一个变量代表需要展示的measure，再使用一个calculation（case函数）来决定这个measure是什么。
+case [Select Measure]
+When 1 then sum([Profit)]
+When 2 then sum([Sales])
+
+
+
+
+更进一步的是嵌套
+比如说：
+
+创建一个calculation field：[Dynamic Measure]
+
+  Case [Select Measure]
+  when 1 then [Sales]
+  when 2 then [Profit]
+  when 3 then [Shipping Cost]
+  when 4 then [Unit Price]
+  END
+
+再将[Dynamic Measure]此结果装入新的计算fleld:[Agg methods]
+
+  case [Select Aggregation]
+  when 1 then sum([Dynamic Measure])
+  when 2 then AVG([Dynamic Measure])
+  when 3 then count([Dynamic Measure])
+  end
+  
+这就得到了可以通过两个parameters控制聚合方法和聚合内容的目的
+
