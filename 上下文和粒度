@@ -1,0 +1,15 @@
+https://elearning.tableau.com/desktop-iitableau/280032/scorm/ckylb4vhr3qh
+
+在使用上下文筛选的情况下，可以使用粒度级别来展现更多层次的数据：
+  1.  比如全球的利润为某一个数，在国家的粒度下，中国地区的销售占整个世界的10%
+      但如果我们调整力度，在上下文筛选中加入亚洲，那中国的销售比例则变成亚洲的44%
+      这可以通过一个：sum（profit）/total（sum（profit））来实现
+  2. 但如果我们使用sum（profit）/{ sum（profit）}的话，无论我们的粒度筛选怎么变化，中国地区的销售占比依然会是在国家粒度下的比例
+  3. 对于2更进一步的公式是：sum（profit）/{Fixed[Region]:sum（profit）} 这样我们就可以把粒度级别始终控制在一个地区的级别。中国地区的销售占比占整个亚洲的44%
+  
+  
+  
+  FIDED字段
+  
+  
+ 
